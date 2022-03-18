@@ -39,12 +39,19 @@ cout<<endl;
 cout<<"Kadas koordinatas bus 'X'?"<< endl;
 do{
                                                                     ///Cikls parbaudei, vai koordinatas ir laukuma ietvaros
-cin>>xi>>xj;                                                     ///Pirmo reizi ievada 'X' koordinatas
-if (xi>=N || xj>=N ||xi<0 ||xj<0)
-    cout<<"Ievadiet koordinatas laukuma ietvaros"<<endl;
-a[xi][xj]= 'X';
+cin>>xi>>xj;                                                        ///Pirmo reizi ievada 'X' koordinatas
 
-}while(xi>=N || xj>=N ||xi<0 ||xj<0);
+
+if (xi>N || xj>N ||xi<1 ||xj<1)
+    cout<<"Ievadiet koordinatas laukuma ietvaros"<<endl;
+
+
+}while(xi>N || xj>N ||xi<1 ||xj<1);
+
+xi=xi-1;
+xj=xj-1;
+
+a[xi][xj]= 'X';
 
 izdg++;
 
@@ -60,11 +67,15 @@ cout<<endl;
 cout<<"Kadas koordinatas bus 'O'?"<< endl;
 cin>>xi>>xj;
 
-if(xi>=N || xj>=N || xi<0 ||xj<0)                       ///Parbaude, vai koordinatas ievaditas laukuma ietvaros
+
+if(xi>N || xj>N ||xi<1 ||xj<1)                       ///Parbaude, vai koordinatas ievaditas laukuma ietvaros
 do{
     cout<<"Ievadiet koordinatas laukuma ietvaros"<<endl;
     cin>>xi>>xj;
-}while (xi>=N || xj>=N || xi<0 ||xj<0);
+}while (xi>N || xj>N ||xi<1 ||xj<1);
+
+xi=xi-1;
+xj=xj-1;
 
 if (a[xi][xj]=='X' || a[xi][xj]=='O')                   ///Parbaude, vai izveletais laucins ir aiznemts
 cout<<"Izvelieties citu laucinu!"<<endl;
@@ -109,11 +120,15 @@ cout<<endl;
 cout<<"Kadas koordinatas bus 'X'?"<< endl;
 cin>>xi>>xj;
 
-if(xi>=N || xj>=N || xi<0 ||xj<0)                       ///Parbaude, vai koordinatas ievaditas laukuma ietvaros
+
+if(xi>N || xj>N ||xi<1 ||xj<1)                       ///Parbaude, vai koordinatas ievaditas laukuma ietvaros
 do{
     cout<<"Ievadiet koordinatas laukuma intervala"<<endl;
     cin>>xi>>xj;
-}while (xi>=N || xj>=N || xi<0 ||xj<0);
+}while (xi>N || xj>N ||xi<1 ||xj<1);
+
+xi=xi-1;
+xj=xj-1;
 
 if (a[xi][xj]=='O'|| a[xi][xj]=='X')                    ///Parbaude, vai izveletais laucins ir aiznemts
 cout<<"Izvelieties citu laucinu!"<<endl;
